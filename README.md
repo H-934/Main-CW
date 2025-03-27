@@ -2,6 +2,20 @@
 
 
 
+End of tutorial
+Add, commit with messate, push
+Open your Github repo to make sure changes are saved
+git status
+
+git add --all
+
+git commit -m "commit message"
+
+git push
+
+
+
+Data Set
 
 from tensorflow.keras.datasets import cifar10
 
