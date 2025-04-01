@@ -13,7 +13,7 @@ This project shows the use of a complete machine learning pipeline using a Convo
 
 ---
 
-## Business Objectives  
+## Objectives  
 The goal is to develop an effective image classifier using CNN that can accurately predict image classes from unseen test data. The target is to achieve a high classification accuracy while minimizing validation loss and overfitting.
 
 ---
