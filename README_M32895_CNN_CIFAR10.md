@@ -40,7 +40,7 @@ The goal is to develop an effective image classifier using CNN that can accurate
 - Used Adam optimizer and categorical cross-entropy loss.
 
 ### 4. Model Evaluation  
-- Model was trained for 20 epochs with batch size 64.
+- Model was trained for 50 epochs with batch size 64.
 - Training/validation accuracy and loss were plotted.
 - Final test accuracy was evaluated on unseen test data.
 - Classification report and confusion matrix were generated for detailed insight.
