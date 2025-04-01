@@ -1,9 +1,9 @@
 
 # M32895 Big Data Applications – Coursework
-UP2116690 - William Cole, UP2113629 - Harry Hallett
+
  
 **Image Classification with Convolutional Neural Networks using CIFAR-10**
-
+UP2116690 - William Cole, UP2113629 - Harry Hallett
 ---
 
 ## Introduction  
