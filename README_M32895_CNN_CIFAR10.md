@@ -1,13 +1,13 @@
 
 # M32895 Big Data Applications – Coursework
 
-## Project Title  
+ 
 **Image Classification with Convolutional Neural Networks using CIFAR-10**
 
 ---
 
 ## Introduction  
-This project demonstrates the deployment of a complete machine learning pipeline using a Convolutional Neural Network (CNN) for image classification. The CIFAR-10 dataset, consisting of 60,000 32x32 color images in 10 classes, is used. The project involves data preprocessing, exploratory data analysis (EDA), CNN model construction, evaluation, and prediction.
+This project shows the use of a complete machine learning pipeline using a Convolutional Neural Network (CNN) for image classification. The CIFAR-10 dataset, consisting of 60,000 32x32 color images in 10 classes, is used. The project involves data preprocessing, exploratory data analysis (EDA), CNN model construction, evaluation, and prediction.
 
 ---
 
