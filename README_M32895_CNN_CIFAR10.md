@@ -6,17 +6,17 @@
 
 ---
 
-## 📌 Introduction  
+## Introduction  
 This project demonstrates the deployment of a complete machine learning pipeline using a Convolutional Neural Network (CNN) for image classification. The CIFAR-10 dataset, consisting of 60,000 32x32 color images in 10 classes, is used. The project involves data preprocessing, exploratory data analysis (EDA), CNN model construction, evaluation, and prediction.
 
 ---
 
-## 🎯 Business Objectives  
+## Business Objectives  
 The goal is to develop an effective image classifier using CNN that can accurately predict image classes from unseen test data. The target is to achieve a high classification accuracy while minimizing validation loss and overfitting.
 
 ---
 
-## 🔁 ML Pipeline
+## ML Pipeline
 
 ### 1. Data Collection  
 - **Dataset**: CIFAR-10, loaded via `tensorflow.keras.datasets`.
@@ -49,7 +49,7 @@ The goal is to develop an effective image classifier using CNN that can accurate
 
 ---
 
-## 📂 Jupyter Notebook Structure  
+## Jupyter Notebook Structure  
 - **Imports and setup**
 - **Data loading and preprocessing**
 - **EDA: visual inspection of images**
@@ -59,15 +59,7 @@ The goal is to develop an effective image classifier using CNN that can accurate
 
 ---
 
-## 🔮 Future Work  
-- Apply data augmentation to improve generalization.
-- Use transfer learning with pretrained models (e.g., VGG16).
-- Optimize CNN architecture with techniques like batch normalization and learning rate scheduling.
-- Train multiple models and perform ensemble voting.
-
----
-
-## 🧰 Libraries and Modules  
+## Libraries Used
 
 - **TensorFlow/Keras** – Deep learning framework used for building and training CNN.
 - **NumPy** – Numerical operations and data manipulation.
@@ -77,18 +69,3 @@ The goal is to develop an effective image classifier using CNN that can accurate
 - **Sklearn** – For splitting data and evaluation metrics like confusion matrix, classification report.
 
 ---
-
-## 🐞 Unfixed Bugs  
-No known bugs encountered in current implementation. All code executes successfully and provides expected outputs.
-
----
-
-## 🙏 Acknowledgements and References  
-- Code generated with support from **ChatGPT**, including structure and markdown.
-- TensorFlow documentation: https://www.tensorflow.org
-- CIFAR-10 dataset reference: https://www.cs.toronto.edu/~kriz/cifar.html
-
----
-
-## ✅ Conclusions  
-This project implemented a full machine learning pipeline for image classification. The CNN achieved good performance on the CIFAR-10 dataset. Future iterations could improve accuracy further via architectural tuning and data augmentation.
