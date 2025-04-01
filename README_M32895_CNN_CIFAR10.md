@@ -9,7 +9,7 @@ UP2116690 - William Cole, UP2113629 - Harry Hallett
 ---
 
 ## Introduction  
-This project shows the use of a complete machine learning pipeline using a Convolutional Neural Network (CNN) for image classification. The CIFAR-10 dataset, consisting of 60,000 32x32 color images in 10 classes, is used. The project involves data preprocessing, exploratory data analysis (EDA), CNN model construction, evaluation, and prediction.
+This project shows the use of a complete machine learning pipeline using a Convolutional Neural Network (CNN) for image classification. We choice to use the CIFAR-10 dataset, consisting of 60,000 32x32 color images organised into 10 classes. The project involves data preprocessing, exploratory data analysis (EDA), CNN model construction, evaluation and prediction.
 
 ---
 
