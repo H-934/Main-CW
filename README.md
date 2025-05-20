@@ -94,4 +94,3 @@ All models were compiled with the Adam optimiser and categorical cross-entropy l
 ### Acknowledgements and References 
 All core ML pipeline components (preprocessing, training, evaluation, EDA) were based on lecture and tutorial content.
 The functions `compare_histories()` and `show_predictions()` were created using online guides such as Tensorflow documentation and suggestions from GitHub's inbuilt Microsoft Copilot assistant, then customised for the CIFAR-10 dataset.
->>>>>>> 261f195d7cd9a58ebb037c8fa5df4f76d486a75a
