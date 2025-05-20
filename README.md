@@ -28,14 +28,20 @@ The goal is to develop an effective image classifier using CNN that can accurate
   - Labels were one-hot encoded using `to_categorical`.
   - The training data was split into 80% training and 20% validation using `train_test_split`.
 
+<<<<<<< HEAD
 ### 2. Exploratory Data Analysis (EDA)
 - A class distribution plot was generated using `seaborn` to confirm dataset balance.
+=======
+### 2. Exploratory Data Analysis (EDA)  
+- A class distribution plot was generated using `seaborn` to confirm dataset balance, reducing the risk of model bias towards dominant categories. 
+>>>>>>> 261f195d7cd9a58ebb037c8fa5df4f76d486a75a
 - Plotted 10 sample images from different classes to understand class distribution and verify correct labeling.
 
 ### 3. Model Building  
 Three different CNN models were developed to compare architectural complexity and performance:
 
 Model 1:
+<<<<<<< HEAD
 - Three convolutional layers with 32, 64, and 128 filters. Increasing the 
 - MaxPooling after each layer
 - Flattened layer
@@ -51,25 +57,54 @@ Model 3:
 - Four convolutional layers (including two consecutive 32-filter layers)
 - Dense layer with 512 units and dropout (0.3)
 - Learning rate of 0.0005
+=======
+- Three convolutional layers with 32, 64, and 128 filters. Increasing the number of filter per layer allows the network to learn more abstract features progressively which improves classification accuracy.
+- MaxPooling after each layer.
+- Flattened layer.
+- Dense layer with 256 units and dropout (0.5).
+- Softmax output (10 units).
+
+Model 2:
+- Two convolutional layers (32, 64 filters).
+- Smaller dense layer with 128 units and dropout (0.4).
+- Reduced learning rate (0.0008).
+
+Model 3:
+- Four convolutional layers (including two consecutive 32-filter layers).
+- Dense layer with 512 units and dropout (0.3).
+- Learning rate of 0.0005.
+>>>>>>> 261f195d7cd9a58ebb037c8fa5df4f76d486a75a
 
 All models were compiled with the Adam optimiser and categorical cross-entropy loss function.
 
 ### 4. Model Evaluation  
 - Model was trained for 20 epochs with batch size 64.
+<<<<<<< HEAD
 - `EarlyStopping` was used to reduce overfitting, monitoring validation loss.
+=======
+- `EarlyStopping` was implemented to reduce overfitting, monitoring validation loss.
+>>>>>>> 261f195d7cd9a58ebb037c8fa5df4f76d486a75a
 - Validation accuracy and loss were plotted for all models.
 - `custom compare_histories()` was used to visualise model performance trends.
 - Final model performance was assessed on the test set.
 
 ### 5. Prediction  
+<<<<<<< HEAD
 - The best-performing model (Model 3) was evaluated on unseen test data.
 - A classification report was generated showing precision, recall, and F1-score per class.
 - A confusion matrix visualised prediction performance across categories.
 - A custom show_predictions() function was used to display example image predictions with confidence scores.
+=======
+- The best-performing model (Model 3) was tested on unseen test data.
+- A classification report was generated showing precision, recall, and F1-score per class.
+- A confusion matrix visualised prediction performance across categories.
+- `show_predictions()` was used to display example image predictions with confidence scores.
+>>>>>>> 261f195d7cd9a58ebb037c8fa5df4f76d486a75a
 
 ---
 
 ## Jupyter Notebook Structure  
+<<<<<<< HEAD
 - Imports and setup
 - Data loading and preprocessing
 - EDA: class distribution and image verification
@@ -78,11 +113,22 @@ All models were compiled with the Adam optimiser and categorical cross-entropy l
 - Performance comparison and accuracy visualisation
 - Testing on unseen data
 - Prediction visualisation
+=======
+- **Imports and setup**
+- **Data loading and preprocessing**
+- **EDA: visual inspection of images**
+- **Model definitions**
+- **Training and validation**
+- **Performance comparison and accuracy visualisation**
+- **Testing on unseen data**
+- **Prediction visualisation**
+>>>>>>> 261f195d7cd9a58ebb037c8fa5df4f76d486a75a
 
 ---
 
 ## Libraries Used
 
+<<<<<<< HEAD
 - TensorFlow / Keras – CNN model design, training, evaluation
 - NumPy – Efficient numerical computations and matrix operations
 - Matplotlib – Plotting training metrics and displaying images
@@ -94,3 +140,17 @@ All models were compiled with the Adam optimiser and categorical cross-entropy l
 
 ## Acknowledgements and References
 All core ML pipeline components (preprocessing, training, evaluation, EDA) were based on lecture content and tutorials from the module. The compare_histories() and show_predictions() functions were created using online guides and suggestions from GitHubs intergrated Microsoft Copilot assistant, then customised for the CIFAR-10 dataset.
+=======
+- **TensorFlow / Keras** – Constructing and training CNN models efficiently using high-level API layers like `Conv2D`, `MaxPooling2D` and optimisers like Adam.
+- **NumPy** – Efficient numerical computations and matrix operations
+- **Matplotlib** – Plotting training metrics and displaying images
+- **Seaborn** – Enhanced visualisations such as confusion matrices and class distribution
+- **Pandas** – Data inspection
+- **Sklearn** – Evaluation metrics like classification reports and tools like `train_test_split`.
+
+---
+
+### Acknowledgements and References 
+All core ML pipeline components (preprocessing, training, evaluation, EDA) were based on lecture and tutorial content.
+The functions `compare_histories()` and `show_predictions()` were created using online guides such as Tensorflow documentation and suggestions from GitHub's inbuilt Microsoft Copilot assistant, then customised for the CIFAR-10 dataset.
+>>>>>>> 261f195d7cd9a58ebb037c8fa5df4f76d486a75a
