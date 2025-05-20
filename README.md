@@ -29,25 +29,43 @@ The goal is to develop an effective image classifier using CNN that can accurate
   - The training data was split into 80% training and 20% validation using `train_test_split`.
 
 ### 2. Exploratory Data Analysis (EDA)  
+- A class distribution plot was generated using `seaborn` to confirm dataset balance.
 - Plotted 10 sample images from different classes to understand class distribution and verify correct labeling.
 
 ### 3. Model Building  
-- Used a sequential CNN architecture:
-  - 3 convolutional layers (32, 64, 128 filters)
-  - MaxPooling after each conv layer
-  - A dense layer with 256 units and dropout for regularization
-  - Softmax output layer for classification
-- Used Adam optimizer and categorical cross-entropy loss.
+Three different CNN models were developed to compare architectural complexity and performance:
+
+Model 1:
+- Three convolutional layers with 32, 64, and 128 filters
+- MaxPooling after each layer
+- Flattened layer
+- Dense layer with 256 units and dropout (0.5)
+- Softmax output (10 units)
+
+Model 2:
+- Two convolutional layers (32, 64 filters)
+- Smaller dense layer with 128 units and dropout (0.4)
+- Reduced learning rate (0.0008)
+
+Model 3:
+- Four convolutional layers (including two consecutive 32-filter layers)
+- Dense layer with 512 units and dropout (0.3)
+- Learning rate of 0.0005
+
+All models were compiled with the Adam optimiser and categorical cross-entropy loss function.
 
 ### 4. Model Evaluation  
-- Model was trained for 50 epochs with batch size 64.
-- Training/validation accuracy and loss were plotted.
-- Final test accuracy was evaluated on unseen test data.
-- Classification report and confusion matrix were generated for detailed insight.
+- Model was trained for 20 epochs with batch size 64.
+- `EarlyStopping` was implemented to reduce overfitting, monitoring validation loss.
+- Validation accuracy and loss were plotted for all models.
+- `custom compare_histories()` was used to visualise model performance trends.
+- Final model performance was assessed on the test set.
 
 ### 5. Prediction  
-- The model was tested on unseen test data.
-- Predictions were compared to true labels and visualized via confusion matrix.
+- The best-performing model (Model 3) was tested on unseen test data.
+- A classification report was generated showing precision, recall, and F1-score per class.
+- A confusion matrix visualised prediction performance across categories.
+- `show_predictions()`was used to display example image predictions with confidence scores.
 
 ---
 
@@ -55,19 +73,30 @@ The goal is to develop an effective image classifier using CNN that can accurate
 - **Imports and setup**
 - **Data loading and preprocessing**
 - **EDA: visual inspection of images**
-- **CNN model creation and training**
-- **Evaluation and visualization**
-- **Final testing and prediction analysis**
+- **Model definitions**
+- **Traing and validation**
+- **Performance comparison and accuracy visualisation**
+- **Testing on unseen data**
+- **Prediction visualisation**
 
 ---
 
 ## Libraries Used
 
-- **TensorFlow/Keras** – Deep learning framework used for building and training CNN.
-- **NumPy** – Numerical operations and data manipulation.
-- **Matplotlib** – Visualization of training metrics and images.
-- **Seaborn** – Enhanced plotting (confusion matrix).
-- **Pandas** – Data handling and inspection.
-- **Sklearn** – For splitting data and evaluation metrics like confusion matrix, classification report.
+- **TensorFlow / Keras** – CNN model design, training, evaluation
+
+- **NumPy** – Efficient numerical computations and matrix operations
+
+- **Matplotlib** – Plotting training metrics and displaying images
+
+- **Seaborn** – Enhanced visualisations such as confusion matrices
+
+- **Pandas** – Data inspection (minimal usage)
+
+- **Sklearn** – Train-test split, classification report, confusion matrix
 
 ---
+
+Acknowledgements and References 
+All core ML pipeline components (preprocessing, training, evaluation, EDA) were based on lecture and tutorial content.
+The `compare_histories()` and `show_predictions()` functions were created using online guides such as Tensorflow and suggestions from GitHub's inbuilt Microsoft Copilot assistant, then customised for the CIFAR-10 dataset.
