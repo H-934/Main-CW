@@ -33,24 +33,26 @@ The goal is to develop an effective image classifier using CNN that can accurate
 - Plotted 10 sample images from different classes to understand class distribution and verify correct labeling.
 
 ### 3. Model Building  
-Three different CNN models were developed to compare architectural complexity and performance:
+Three different CNN models were developed to compare architectural complexity and performance. Each model was refined based on its behaviour with the goal of improving accuracy and reducing overfitting.
 
-Model 1:
+Model 1 (base):
 - Three convolutional layers with 32, 64, and 128 filters. Increasing the number of filter per layer allows the network to learn more abstract features progressively which improves classification accuracy.
-- MaxPooling after each layer.
-- Flattened layer.
-- Dense layer with 256 units and dropout (0.5).
+- MaxPooling after each layer to reduce spatial dimensions.
+- Flattened layer followed by Dense layer with 256 units and dropout (0.5) to control overfitting.
 - Softmax output (10 units).
+- Served as a standard baseline.
 
-Model 2:
+Model 2 (simplified):
 - Two convolutional layers (32, 64 filters).
 - Smaller dense layer with 128 units and dropout (0.4).
-- Reduced learning rate (0.0008).
+- Reduced learning rate (0.0008) for more stable convergence.
+- This model tested wheter a shallower archiecture could achieve similar accuracy with fewer parameters, potentially reducing overfitting and training time.
 
 Model 3:
-- Four convolutional layers (including two consecutive 32-filter layers).
-- Dense layer with 512 units and dropout (0.3).
-- Learning rate of 0.0005.
+- Four convolutional layers (including two consecutive 32-filter layers) to capture finer features early.
+- Dense layer with 512 units and dropout (0.3) to improve generalisation.
+- Reduced learning rate (0.0005) for refined updates.
+- This model combined depth with strong regularisation, building upon and learning from previous models behaviour. Resulting in the best performance on validation and test sets.
 
 All models were compiled with the Adam optimiser and categorical cross-entropy loss function.
 
